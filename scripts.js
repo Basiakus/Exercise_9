@@ -7,6 +7,7 @@ function triAngleArea(a, h) {
     if (a > 0 && h > 0) {
         return a * h / 2
     } else if (a <= 0 || h <= 0) {
+       return "Podane wartości muszą być większe od 0"
        console.log("Podane wartości muszą być większe od 0");
     } else {
         console.log("Nieprawidłowe dane");
@@ -48,7 +49,7 @@ var dinoReplace = text.replace('Velociraptor', bigDinozaur);
 console.log(dinoReplace);
 console.log(dinoReplace.length/2)
 
-var shortText = dinoReplace.slice(0, 72);
+var shortText = dinoReplace.slice(0, dinoReplace.length/2);
 console.log(shortText);
 console.log(shortText.length);
 */
