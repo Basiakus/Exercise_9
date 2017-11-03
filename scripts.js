@@ -10,10 +10,12 @@ function triAngleArea(a, h) {
        return "Podane wartości muszą być większe od 0"
        console.log("Podane wartości muszą być większe od 0");
     } else {
-        console.log("Nieprawidłowe dane");
+        return "Nieprawidłowe dane";
     }
 }
 console.log(triAngleArea(0, 7));
+console.log(triAngleArea(2, 10));
+console.log(triAngleArea(22, 0))
 */
 
 
@@ -47,9 +49,9 @@ var bigDinozaur = dinozaur.toUpperCase();
 console.log(bigDinozaur);
 var dinoReplace = text.replace('Velociraptor', bigDinozaur);
 console.log(dinoReplace);
-console.log(dinoReplace.length/2)
+console.log(dinoReplace.length / 2)
 
-var shortText = dinoReplace.slice(0, dinoReplace.length/2);
+var shortText = dinoReplace.slice(0, dinoReplace.length / 2);
 console.log(shortText);
 console.log(shortText.length);
 */
