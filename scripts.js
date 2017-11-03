@@ -8,7 +8,6 @@ function triAngleArea(a, h) {
         return a * h / 2
     } else if (a <= 0 || h <= 0) {
        return "Podane wartości muszą być większe od 0"
-       console.log("Podane wartości muszą być większe od 0");
     } else {
         return "Nieprawidłowe dane";
     }
