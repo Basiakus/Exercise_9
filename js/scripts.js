@@ -69,3 +69,21 @@ function drawTree(row) {
 }
 drawTree(4);
 
+/*
+var nav = document.getElementById('nav');
+console.log(nav.nextElementSibling);
+var newH1 = document.createElement('h1');
+console.log('h1');
+newH1.innerHTML = "text h1 utworzony poprzez element.innerHTML";
+console.log(newH1);
+nav.appendChild(newH1);
+nav.className += " addClass";
+console.log(nav.className);
+*/
+var button = document.getElementsByClassName('btn');
+console.log(button);
+console.log(button.length);
+for (var i = 0; i < button.length; i++) {
+    var text = button[i].innerText;
+    console.log(text);
+}
