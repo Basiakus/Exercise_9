@@ -2,7 +2,6 @@
 
 /*
 // ---zadanie 9.1 FUNKCJE---
-
 function triAngleArea(a, h) {
     if (a > 0 && h > 0) {
         return a * h / 2
@@ -21,10 +20,8 @@ console.log(triAngleArea(22, 0))
 
 /*
 // ---zadanie 9.2 TABLICE---
-
 var femaleNames = ['Kasia', 'Basia', 'Zosia'];
 var maleNames = ['Adam', 'Krzysztof', 'Paweł'];
-
 var addNames = femaleNames.concat(maleNames);
 console.log(addNames);
 var newMan = 'Adam';
@@ -40,7 +37,6 @@ if (addNames.indexOf(newMan) === -1) {
 
 /*
 //---Zadanie 9.3 łańcuchy znaków / triceratops---
-
 var text = 'Velociraptor is a genus of herbivorous ceratopsid dinosaur that first appeared during the late Maastrichtian stage of the late Cretaceous period.';
 console.log(text);
 var dinozaur = 'triceratops';
@@ -49,13 +45,12 @@ console.log(bigDinozaur);
 var dinoReplace = text.replace('Velociraptor', bigDinozaur);
 console.log(dinoReplace);
 console.log(dinoReplace.length / 2)
-
 var shortText = dinoReplace.slice(0, dinoReplace.length / 2);
 console.log(shortText);
 console.log(shortText.length);
 */
 
-
+/*
 //---Zadanie 9.4 choinka---
 function drawTree(row) {
 
@@ -68,22 +63,46 @@ function drawTree(row) {
     }
 }
 drawTree(4);
-
-/*
-var nav = document.getElementById('nav');
-console.log(nav.nextElementSibling);
-var newH1 = document.createElement('h1');
-console.log('h1');
-newH1.innerHTML = "text h1 utworzony poprzez element.innerHTML";
-console.log(newH1);
-nav.appendChild(newH1);
-nav.className += " addClass";
-console.log(nav.className);
 */
-var button = document.getElementsByClassName('btn');
-console.log(button);
-console.log(button.length);
-for (var i = 0; i < button.length; i++) {
-    var text = button[i].innerText;
-    console.log(text);
+
+// zadanie 9.5 DOM
+var jsButton = document.getElementsByClassName('btn');
+console.log(jsButton[5]);
+console.log(jsButton.length);
+for (var i = 0; i < jsButton.length; i++) {
+   console.log(jsButton[i].innerText);
 }
+
+// ---Zadania z ćwiczeń
+//rola parametru element / info ?, a funkcję wpisać bezpośrednio w bloku listenera ???
+function afterClick(info) {
+   alert(info);
+   console.log(info);
+}
+var jsButton = document.getElementById('js-btn');
+jsButton.addEventListener('click', function(element)  {
+   afterClick("Brawo klikąłeś przycisk :\)");   
+   
+});
+var jsInput = document.getElementById('js-input');
+jsInput.addEventListener('keypress', function(pressByUser) {
+   pressByUser.target.value += " ! ";
+   console.log(pressByUser.target.value);
+})
+
+//---Zadanie 9.6 EEventy
+var addButton = document.getElementById('js-addButton');
+var customList = document.getElementById('js-addList');
+var tagLi = document.getElementsByTagName('li');
+console.log(addButton);
+console.log(customList);
+
+
+function makeLiElement() {
+    var newLi = document.createElement('li');
+    newLi.innerHTML = "Element " + tagLi.length;
+    customList.appendChild(newLi);
+}
+addButton.addEventListener('click', function() {
+    makeLiElement();
+});
