@@ -66,11 +66,11 @@ drawTree(4);
 */
 
 // zadanie 9.5 DOM
-var jsButton = document.getElementsByClassName('btn');
-console.log(jsButton[5]);
-console.log(jsButton.length);
-for (var i = 0; i < jsButton.length; i++) {
-   console.log(jsButton[i].innerText);
+var jsButtons = document.getElementsByClassName('btn');
+console.log(jsButtons[5]);
+console.log(jsButtons.length);
+for (var i = 0; i < jsButtons.length; i++) {
+   console.log(jsButtons[i].innerText);
 }
 
 // ---Zadania z ćwiczeń
@@ -79,28 +79,28 @@ function afterClick(info) {
    alert(info);
    console.log(info);
 }
-var jsButtons = document.getElementById('js-btn');
-jsButtons.addEventListener('click', function(element)  {
+var jsButton = document.getElementById('js-btn');
+jsButton.addEventListener('click', function(element)  {
    afterClick("Brawo klikąłeś przycisk :\)");   
    
 });
-var jsInputs = document.getElementById('js-input');
-jsInputs.addEventListener('keypress', function(pressByUser) {
+var jsInput = document.getElementById('js-input');
+jsInput.addEventListener('keypress', function(pressByUser) {
    pressByUser.target.value += " ! ";
    console.log(pressByUser.target.value);
 })
 
 //---Zadanie 9.6 EEventy
-var addButtons = document.getElementById('js-addButton');
-var customLists = document.getElementById('js-addList');
-var tagLi = document.getElementsByTagName('li');
-console.log(addButtons);
-console.log(customLists);
+var addButton = document.getElementById('js-addButton');
+var customList = document.getElementById('js-addList');
+var liTags = document.getElementsByTagName('li');
+console.log(addButton);
+console.log(customList);
 
 
 function makeLiElement() {
     var newLi = document.createElement('li');
-    newLi.innerHTML = "Element " + tagLi.length;
-    customLists.appendChild(newLi);
+    newLi.innerHTML = "Element " + liTags.length;
+    customList.appendChild(newLi);
 }
-addButtons.addEventListener('click', makeLiElement);
+addButton.addEventListener('click', makeLiElement);
